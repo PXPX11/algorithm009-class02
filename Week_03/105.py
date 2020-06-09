@@ -19,7 +19,7 @@ def buildTree(self, preorder, inorder):
     def build(stop):
         if inorder and inorder[-1] != stop:
             root = TreeNode(preorder.pop())
-            root.left = build(root.val)
+            root.left = build(root.val) #其实我把这段代码放上来希望助教帮忙解读一下的个新 def 的函数想要实现的是什么? 以及从这行往下的三行在做什么事
             inorder.pop()
             root.right = build(stop)
             return root
